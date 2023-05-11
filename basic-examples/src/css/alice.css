@@ -1,0 +1,94 @@
+/* селектор {
+  свойство : значение;
+  свойство : значение;
+  свойство : значение;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: red;
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;
+  /* text-decoration: underline; */
+  /* text-decoration: line-through; */
+  font-size: 30px;
+}
+
+.text-bold {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.chapter {
+  color: rgba(24, 100, 171, 0.5);
+}
+
+#begin {
+  color: orange;
+  font-weight: bold;
+}
+
+.box {
+  display: inline-block;
+  vertical-align: middle;
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  padding: 20px;
+  /* padding-left: 50px; */
+  /* padding-top: 20px; */
+  /* padding: 20px 50px 40px 60px; */
+  border: 3px solid black;
+  /* border-width: 3px; */
+  /* border-style: solid; */
+  /* border-color: black; */
+  margin: 20px;
+  /* z-index: 5; */
+}
+
+.pink {
+  color: pink;
+}
+
+a {
+  padding: 20px;
+  margin: 20px;
+  width: 500px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+/* Виды элементов: */
+/* Блочные */
+/* Строчные */
+/* Строчно-блочные */
+
+nav {
+  /* static, relative, absolute, fixed, inherit */
+  position: inherit;
+  right: 0px;
+  top: 50px;
+  /* bottom, top, right, left */
+}
+
+.red {
+  /* position: absolute; */
+  /* left: 80px; */
+  background-color: red;
+  /* height: 100px; */
+  /* z-index: -1; */
+  width: 50vw;
+  height: 30vh;
+}
+.example {
+  position: relative;
+}
