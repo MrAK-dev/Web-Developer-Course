@@ -1,0 +1,26 @@
+.consultation {
+  min-height: 68rem;
+  padding: 10rem 0 9.2rem;
+  background: url('../img/form-bg.png') center (center/cover) no-repeat;
+
+  .title_left {
+    margin-bottom: 0.8rem;
+  }
+  &__descr {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3.6rem;
+  }
+
+  .error {
+    border: 1px solid red;
+  }
+  label.error {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    border: none;
+    margin-bottom: 1.5rem;
+  }
+}

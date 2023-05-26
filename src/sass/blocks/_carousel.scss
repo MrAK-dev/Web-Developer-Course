@@ -1,0 +1,28 @@
+.carousel {
+  padding: 8rem 0;
+
+  &__inner {
+    position: relative;
+    width: 75rem;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -66px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .slick-next {
+    left: auto;
+    right: -66px;
+  }
+}

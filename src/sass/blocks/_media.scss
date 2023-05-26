@@ -1,0 +1,163 @@
+/************************/
+/* BELOW  944px(Tablets)  */
+/************************/
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = .5 = 50% */
+    font-size: 50%;
+  }
+
+  .promo {
+    .header {
+      // justify-content: center;
+      // gap: 1rem;
+      padding: 0 2rem;
+    }
+    &__wrapper {
+      align-items: center;
+      margin-top: 4.5rem;
+    }
+  }
+
+  .advantages {
+    padding: 3rem 0 3.2rem 0;
+    .title {
+      margin-bottom: 3rem;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .advantage {
+      &__descr {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .consultation {
+    padding: 5rem 0 0;
+    min-height: 58rem;
+    .title {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+    }
+
+    &__descr {
+      text-align: center;
+    }
+
+    .feed-form {
+      margin: 0 auto;
+    }
+  }
+
+  .carousel {
+    .slick-dots {
+      list-style: none;
+      display: flex !important;
+      justify-content: center;
+      gap: 2rem;
+      button {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+        border-radius: 50%;
+        border: none;
+        color: #fff;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  .catalog {
+    &__content {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+}
+
+/************************/
+/* BELOW  704px(Smaller tablets)  */
+/************************/
+@media (max-width: 44em) {
+  .carousel {
+    &__inner {
+      width: auto;
+    }
+  }
+
+  .catalog {
+    padding-bottom: 5rem;
+    &__tab {
+      width: 140px;
+    }
+  }
+
+  .reviews {
+    .review {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/************************/
+/* BELOW  544px(Phones)  */
+/************************/
+@media (max-width: 34em) {
+  .header {
+    &__official {
+      display: none;
+    }
+
+    &__contacts {
+      display: none;
+    }
+  }
+
+  .promo {
+    &__icons {
+      width: auto;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  .catalog {
+    &__tab {
+      width: auto;
+      font-size: 1.3rem;
+      padding: 1.4rem 1rem;
+    }
+  }
+
+  .reviews {
+    .review {
+      &__descr {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .footer {
+    &__info {
+      width: auto;
+    }
+  }
+}

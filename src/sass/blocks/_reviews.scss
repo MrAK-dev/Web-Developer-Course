@@ -1,0 +1,38 @@
+.reviews {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .review {
+    color: #0d0d0d;
+    display: flex;
+    gap: 6rem;
+
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    &__subheading {
+      color: #646464;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    &__descr {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 68rem;
+      padding-right: 3rem;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-align: start;
+        line-height: 24px;
+      }
+    }
+  }
+}
