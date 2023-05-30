@@ -1,79 +1,62 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCss = require('gulp-clean-css');
-const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
+// Основной модуль
+import gulp from 'gulp';
+// Импорт путей
+import { path } from './gulp/config/path.js';
+//  Импорт общих плагинов
+import { plugins } from './gulp/config/plugins.js';
+//  Импорт задач
+import { copy } from './gulp/tasks/copy.js';
+import { reset } from './gulp/tasks/reset.js';
+import { html } from './gulp/tasks/html.js';
+import { server } from './gulp/tasks/server.js';
+import { scss } from './gulp/tasks/scss.js';
+import { js } from './gulp/tasks/js.js';
+import { images } from './gulp/tasks/images.js';
+import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
+import { svgSprive } from './gulp/tasks/svgSprive.js';
+import { zip } from './gulp/tasks/zip.js';
+import { ftp } from './gulp/tasks/ftp.js';
 
-gulp.task('server', () => {
-  browserSync.init({
-    server: {
-      baseDir: './dist',
-    },
-  });
+//  Передаем значения в глобальную переменную
+global.app = {
+  isBuild: process.argv.includes('--build'),
+  isDev: !process.argv.includes('--build'),
+  path: path,
+  gulp: gulp,
+  plugins: plugins,
+};
 
-  gulp.watch('src/*.html').on('change', browserSync.reload);
-});
+//  Наблюдатель за изменениями в файлах
+const watcher = () => {
+  gulp.watch(path.watch.files, copy);
+  gulp.watch(path.watch.html, html);
+  gulp.watch(path.watch.scss, scss);
+  gulp.watch(path.watch.js, js);
+  gulp.watch(path.watch.images, images);
+};
 
-gulp.task('styles', () => {
-  return gulp
-    .src('./src/sass/*.+(scss|sass)')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(
-      rename({
-        prefix: '',
-        suffix: '.min',
-      })
-    )
-    .pipe(autoprefixer())
-    .pipe(cleanCss({ compatibility: 'ie8' }))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream());
-});
+export { svgSprive };
 
-gulp.task('watch', () => {
-  gulp.watch('./src/sass/**/*.+(scss|sass|css)', gulp.parallel('styles'));
-  gulp.watch('./src/*.html').on('change', gulp.parallel('html'));
-});
+// Последовательная обработка шрифтов
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-gulp.task('html', () => {
-  return gulp
-    .src('./src/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task('scripts', () => {
-  return gulp.src('./src/js/**/*.js').pipe(gulp.dest('./dist/js'));
-});
-
-gulp.task('fonts', () => {
-  return gulp.src('./src/fonts/**/*').pipe(gulp.dest('./dist/fonts'));
-});
-
-gulp.task('icons', () => {
-  return gulp.src('./src/icons/**/*').pipe(gulp.dest('./dist/icons'));
-});
-
-gulp.task('images', () => {
-  return gulp
-    .src('./src/img/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./dist/img'));
-});
-
-gulp.task(
-  'default',
-  gulp.parallel(
-    'watch',
-    'server',
-    'html',
-    'styles',
-    'scripts',
-    'fonts',
-    'icons',
-    'images'
-  )
+//  Основные задачи
+const mainTasks = gulp.series(
+  fonts,
+  gulp.parallel(copy, html, scss, js, images, svgSprive)
 );
+
+// Построение сценариев выполнения задач
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+const deployZIP = gulp.series(reset, mainTasks, zip);
+const deployFTP = gulp.series(reset, mainTasks, ftp);
+
+//  Экспорт сценариев
+export { dev };
+export { build };
+export { deployZIP };
+export { deployFTP };
+
+//  Выполнение сценария по умолчанию
+gulp.task('default', dev);

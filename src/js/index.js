@@ -1,11 +1,17 @@
+import * as flsFunctions from './modules/functions.js';
+import $ from 'jquery';
+import 'slick-carousel';
+import WOW from 'wow.js';
+flsFunctions.isWebp();
+
 $(function () {
   $('.carousel__inner').slick({
     speed: 1200,
     // adaptiveHeight: true,
     prevArrow:
-      '<button type="button" class="slick-prev"><img src="./icons/chevron-left-solid.png" alt="" /></button>',
+      '<button type="button" class="slick-prev"><img src="./img/icons/chevron-left-solid.png" alt="" /></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><img src="./icons/chevron-right-solid.png" alt="" /></button>',
+      '<button type="button" class="slick-next"><img src="./img/icons/chevron-right-solid.png" alt="" /></button>',
     responsive: [
       {
         breakpoint: 992,
@@ -66,39 +72,6 @@ $(function () {
       $('.overlay, #order').fadeIn('slow');
     });
   });
-
-  function validateForms(form) {
-    $(form).validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2,
-        },
-        phone: 'required',
-        email: {
-          required: true,
-          email: true,
-        },
-      },
-      messages: {
-        name: {
-          required: 'Пожалуйста, введите свое имя',
-          minlength: jQuery.validator.format('Введите {0} симмвола'),
-        },
-        phone: 'Пожалуйста, введите свой номер телефона',
-        email: {
-          required: 'Пожалуйста, введите свою почту',
-          email: 'Не правильно введен адрес почты',
-        },
-      },
-    });
-  }
-
-  validateForms('#consultation-form');
-  validateForms('#consultation form');
-  validateForms('#order form');
-
-  $('input[name=phone]').mask('+7 (999) 999-99-99');
 
   //  Smooth scroll and pageup
 
