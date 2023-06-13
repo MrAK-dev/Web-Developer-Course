@@ -1,0 +1,48 @@
+.title {
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 6rem;
+  &_fz14 {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+
+  &_fz16 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  &_fz20 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  &_fz36 {
+    font-size: 3.6rem;
+  }
+
+  &_fz48 {
+    font-size: 4.8rem;
+  }
+  &_centred {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.subtitle {
+  padding-left: 1.2rem;
+  padding-top: 0.2rem;
+  position: relative;
+  z-index: 1;
+  @include before_circle;
+  &_centred {
+    text-align: center;
+    position: relative;
+    @include before-circle;
+    &:before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

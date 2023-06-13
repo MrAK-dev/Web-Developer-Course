@@ -1,0 +1,62 @@
+.tools {
+  padding-top: 12.5rem;
+  &__cards {
+    padding: 0 1rem;
+    margin-bottom: 12rem;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-auto-rows: minmax(270px, auto);
+    gap: 1.3rem;
+    .card {
+      padding: 3rem;
+      padding-bottom: 2rem;
+      border: 1px solid #000;
+      &__img-wrapper {
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      &__title {
+        margin-bottom: 1.5rem;
+      }
+
+      &__text {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__progress-bars {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 4.5rem;
+    row-gap: 3rem;
+    .progress-bar {
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.7rem;
+      }
+
+      &__percentage {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+      }
+
+      &__scale {
+        height: 14px;
+        width: 100%;
+        background-color: #e8e4de;
+        border-radius: 4px;
+        &_full {
+          height: 100%;
+          border-radius: 4px;
+          background-color: var(--color-primary);
+        }
+      }
+    }
+  }
+}

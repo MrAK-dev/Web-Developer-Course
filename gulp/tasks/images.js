@@ -21,7 +21,7 @@ export const images = () => {
       app.plugins.if(
         app.isBuild,
         imagemin({
-          progresskve: true,
+          progressive: true,
           svgoPlugins: [{ removeViewBox: false }],
           interlaced: true,
           opimizationLevel: 3, // 0 to 7

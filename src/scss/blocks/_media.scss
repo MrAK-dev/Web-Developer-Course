@@ -1,0 +1,311 @@
+@media (max-width: 1439px) {
+  .sidepanel {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 96rem;
+  }
+  .sidepanel {
+    display: none;
+  }
+
+  .about {
+    &__wrapper {
+      grid-template-columns: 400px 520px;
+      gap: 4rem;
+    }
+    &__skills {
+      grid-template-columns: repeat(2, 250px);
+      column-gap: 2rem;
+    }
+
+    .skill {
+      grid-template-columns: 40px 195px;
+      column-gap: 1.5rem;
+    }
+  }
+
+  .experience {
+    &__wrapper {
+      grid-template-columns: repeat(2, 375px);
+      column-gap: 10rem;
+    }
+  }
+
+  .tools {
+    &__cards {
+      grid-template-columns: repeat(auto-fit, 270px);
+      justify-content: space-around;
+    }
+
+    &__progress-bars {
+      grid-template-columns: repeat(auto-fit, 350px);
+      justify-content: space-around;
+      padding: 0 0.3rem;
+    }
+  }
+
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: space-around;
+      row-gap: 2rem;
+    }
+    &__item {
+      &_4,
+      &_6 {
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+  }
+
+  .contacts {
+    &__wrapper {
+      padding: 0;
+      grid-template-columns: 400px 520px;
+    }
+    &__form {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 72rem;
+  }
+
+  .title {
+    &_fz36 {
+      font-size: 3rem;
+    }
+  }
+
+  .about {
+    &__wrapper {
+      grid-template-columns: 300px 380px;
+    }
+
+    &__skills {
+      grid-template-columns: 380px;
+      grid-auto-rows: minmax(115px, auto);
+    }
+    .skill {
+      grid-template-columns: 40px 320px;
+      column-gap: 2rem;
+    }
+  }
+
+  .experience {
+    &__wrapper {
+      padding: 0;
+      grid-template-columns: repeat(2, 345px);
+      column-gap: 5rem;
+    }
+  }
+
+  .tools {
+    &__cards {
+      margin-bottom: 4rem;
+    }
+    &__progress-bars {
+      grid-template-columns: repeat(auto-fit, 320px);
+      padding: 0;
+      column-gap: 0;
+    }
+  }
+
+  .price-list {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 350px);
+      padding: 0;
+    }
+  }
+
+  .contacts {
+    &__wrapper {
+      grid-template-columns: 300px 400px;
+    }
+    &__form {
+      grid-template-columns: repeat(2, 195px);
+    }
+
+    &__btn {
+      padding: 0.8rem 2.5rem;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 54rem;
+  }
+  .title {
+    &_fz48 {
+      font-size: 2.8rem;
+    }
+  }
+
+  .promo {
+    &__title {
+      line-height: 3.9rem;
+      width: 30rem;
+    }
+  }
+
+  .about {
+    padding-top: 4rem;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px auto auto;
+    }
+
+    &__img {
+      grid-row: unset;
+    }
+
+    &__skills {
+      grid-template-columns: repeat(2, 260px);
+    }
+    .skill {
+      grid-template-columns: 40px 200px;
+      column-gap: 2rem;
+    }
+  }
+
+  .divider {
+    &_centred {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .experience {
+    padding-top: 4rem;
+    &__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+  }
+
+  .tools {
+    padding-top: 4rem;
+  }
+  .portfolio {
+    padding-top: 4rem;
+  }
+
+  .price-list {
+    padding-top: 4rem;
+
+    &__wrapper {
+      justify-content: center;
+    }
+  }
+
+  .contacts {
+    padding-top: 4rem;
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__img {
+      display: none;
+    }
+
+    &__form {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .title {
+    &_fz48 {
+      font-size: 2.6rem;
+    }
+
+    &_fz36 {
+      font-size: 2.4rem;
+    }
+  }
+
+  .hamburger {
+    right: 2rem;
+  }
+
+  .menu {
+    &__block {
+      width: 25rem;
+      padding-left: 2rem;
+    }
+  }
+
+  .promo {
+    background: url('../img/main_bg.jpg') no-repeat 57% / cover;
+    &__title {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .about {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 340px auto;
+    }
+
+    &__skills {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .tools {
+    &__title {
+      line-height: 36px;
+    }
+
+    &__progress-bars {
+      grid-template-columns: repeat(auto-fit, 300px);
+    }
+  }
+
+  .price-list {
+    &__wrapper {
+      grid-template-columns: repeat((auto-fit, 300px));
+    }
+  }
+
+  .contacts {
+    padding-bottom: 5rem;
+    &__form {
+      grid-template-columns: 1fr;
+      grid-template-rows: 45px 45px 190px 45px;
+    }
+    &__input {
+      grid-column: 1 / 3;
+    }
+
+    &__triggers {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+    &__policy {
+      grid-row: 1;
+      width: 180px;
+      margin: 0 auto;
+    }
+
+    &__btn {
+      padding: 1.2rem 2.5rem;
+    }
+  }
+}

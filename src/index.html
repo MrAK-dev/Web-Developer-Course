@@ -116,8 +116,630 @@
     <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/index.min.js" defer></script>
   </head>
   <body>
-    <script src="js/index.min.js"></script>
+    <aside class="sidepanel">
+      <a href="#" class="sidepanel__link"
+        ><img src="./icons/social/facebook.svg" alt="facebook" /></a
+      ><a href="#" class="sidepanel__link"
+        ><img src="./icons/social/instagram.svg" alt="instagram" /></a
+      ><a href="#" class="sidepanel__link"
+        ><img src="./icons/social/github.svg" alt="github"
+      /></a>
+      <div class="sidepanel__divider"></div>
+      <p class="sidepanel__text">
+        <span> Социальные сети </span>
+      </p>
+    </aside>
+
+    <div class="menu">
+      <div class="menu__block">
+        <img
+          src="./icons/menu/Close.svg"
+          alt="close cross"
+          class="menu__close"
+        />
+        <nav>
+          <ul class="menu__list">
+            <li class="menu__list-item"><a href="#">ПРО МЕНЯ</a></li>
+            <li class="menu__list-item"><a href="#">МОЙ ОПЫТ</a></li>
+            <li class="menu__list-item"><a href="#">МОИ НАВЫКИ</a></li>
+            <li class="menu__list-item"><a href="#">МОИ РАБОТЫ</a></li>
+            <li class="menu__list-item"><a href="#">ПРАЙС-ЛИСТ</a></li>
+            <li class="menu__list-item"><a href="#">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu__social">
+          <a href="#"><img src="./icons/menu/Github.svg" alt="github" /></a
+          ><a href="#"
+            ><img src="./icons/menu/Instagram.svg" alt="instagram" /></a
+          ><a href="#"
+            ><img src="./icons/menu/Facebook.svg" alt="facebook"
+          /></a>
+        </div>
+      </div>
+      <div class="menu__overlay"></div>
+    </div>
+
+    <section class="promo">
+      <div class="hamburger">
+        <span></span><span class="long"></span><span></span>
+      </div>
+      <div class="container">
+        <p class="title title_fz16 subtitle promo__subtitle">
+          Меня зовут Александра Смит
+        </p>
+        <h1 class="title title_fz48 promo__title">
+          Я web-разработчик из города Москва
+        </h1>
+        <div class="promo__btns">
+          <a href="#" class="promo__link btn">Портфолио</a>
+          <a href="#" class="promo__link btn btn_transparent">Про меня</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <!-- <picture class="about__img">
+            <source
+              media="(max-width: 576px)"
+              srcset="./img/main_photo-min.jpg"
+            />
+            <source media="(min-width: 577px)" srcset="./img/main_photo.jpg" />
+            <img src="./img/main_photo.jpg" alt="girl with coffee cup" />
+          </picture> -->
+
+          <!-- <picture class="about__img">
+            <source type="image/webp" srcset="./img/main_photo.webp" />
+            <img src="./img/main_photo.jpg" alt="girl with coffee cup" />
+          </picture> -->
+
+          <div class="about__img">
+            <img src="./img/main_photo.jpg" alt="girl with coffee cup" />
+          </div>
+
+          <div class="about__descr">
+            <p class="title title_fz16 subtitle about__subtitle">Про меня</p>
+            <h2 class="title title_fz36 about__title">Меня зовут Александра</h2>
+            <div class="divider"></div>
+            <p class="about__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </div>
+
+          <div class="about__skills">
+            <div class="skill">
+              <picture class="skill__img-wrapper">
+                <img
+                  src="./icons/about_me/web_development.svg"
+                  alt="monitor with website icon"
+                  class="skill__img"
+                />
+              </picture>
+              <div class="skill__text-wrapper">
+                <h3 class="title title_fz14 skill__title">Web-разработка</h3>
+                <p class="skill__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div class="skill">
+              <picture class="skill__img-wrapper">
+                <img
+                  src="./icons/about_me/mobile_dev.svg"
+                  alt="mobile icon"
+                  class="skill__img"
+                />
+              </picture>
+              <div class="skill__text-wrapper">
+                <h3 class="title title_fz14 skill__title">
+                  Разработка приложений
+                </h3>
+                <p class="skill__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div class="skill">
+              <picture class="skill__img-wrapper">
+                <img
+                  src="./icons/about_me/design.svg"
+                  alt="monitor with design icon"
+                  class="skill__img"
+                />
+              </picture>
+              <div class="skill__text-wrapper">
+                <h3 class="title title_fz14 skill__title">UI/UX Design</h3>
+                <p class="skill__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <div class="container">
+        <p class="title title_fz16 subtitle_centred experience__subtitle">
+          Опыт
+        </p>
+        <h2 class="title title_fz36 title_centred experience__title">
+          Чем я буду полезна
+        </h2>
+        <div class="divider divider_centred"></div>
+        <div class="experience__wrapper">
+          <div class="experience__column">
+            <h3 class="title title_fz20 experience__column-title">
+              Образование
+            </h3>
+            <ul>
+              <li>
+                <div class="experience__item">
+                  <div class="experience__item-head">
+                    <picture class="experience__item-icon">
+                      <img
+                        src="./icons/experience/university.svg"
+                        alt="university"
+                      />
+                    </picture>
+                    <h4 class="title title_fz14">МГТУ им. Н. Э. Баумана</h4>
+                    <p class="experience__item-location">
+                      Диплом магистра | Москва (2014-2020)
+                    </p>
+                  </div>
+
+                  <div class="experience__item-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="experience__item">
+                  <div class="experience__item-head">
+                    <picture class="experience__item-icon">
+                      <img src="./icons/experience/courses.svg" alt="courses" />
+                    </picture>
+                    <h4 class="title title_fz14">Udemy</h4>
+                    <p class="experience__item-location">
+                      Курсы по Web-разработке
+                    </p>
+                  </div>
+
+                  <div class="experience__item-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience__column">
+            <h3 class="title title_fz20 experience__column-title">
+              Опыт работы
+            </h3>
+            <ul>
+              <li>
+                <div class="experience__item">
+                  <div class="experience__item-head">
+                    <picture class="experience__item-icon">
+                      <img
+                        src="./icons/experience/developer.svg"
+                        alt="developer"
+                      />
+                    </picture>
+                    <h4 class="title title_fz14">Front-End Developer</h4>
+                    <p class="experience__item-location">
+                      EPAM | Москва (2018-2019)
+                    </p>
+                  </div>
+
+                  <div class="experience__item-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="experience__item">
+                  <div class="experience__item-head">
+                    <picture class="experience__item-icon">
+                      <img
+                        src="./icons/experience/designer.svg"
+                        alt="designer"
+                      />
+                    </picture>
+                    <h4 class="title title_fz14">UI/UX Designer</h4>
+                    <p class="experience__item-location">
+                      Squad Team | Москва (2018)
+                    </p>
+                  </div>
+
+                  <div class="experience__item-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools">
+      <div class="container">
+        <p class="title title_fz16 subtitle_centred tools__subtitle">Навыки</p>
+        <h2 class="title title_fz36 title_centred tools__title">
+          Что я использую в работе
+        </h2>
+        <div class="divider divider_centred"></div>
+
+        <div class="tools__cards">
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/html5.svg"
+                alt="html5 icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">HTML5</h3>
+            <p class="card__text">
+              Именно он создает каркас вашего сайта или приложения, а пятая
+              версия позволит мне создавать более SEO-оптимизированную структуру
+              вашего продукта
+            </p>
+          </div>
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/css3.svg"
+                alt="CSS3 icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">CSS3</h3>
+            <p class="card__text">
+              Этот язык стилей позволяет мне создавать абсолютно любой внешний
+              вид вашего сайта или приложения. Все ограничивается только вашей
+              фантазией!
+            </p>
+          </div>
+
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/js.svg"
+                alt="JavaScript icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">Java Script</h3>
+            <p class="card__text">
+              Этот язык программирования позволяет оживить все что угодно:
+              слайдеры, окна, подсказки, вкладки, получение данных от сервера и
+              многое другое
+            </p>
+          </div>
+
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/jquery.svg"
+                alt="jQuery icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">Jquery</h3>
+            <p class="card__text">
+              Библиотека Jquery позволит ускорить разработку. Без необходимости
+              интегрировать в проект мы её не будем, но навык работы с ней
+              присутствует
+            </p>
+          </div>
+
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/react.svg"
+                alt="reactJS icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">React</h3>
+            <p class="card__text">
+              Эта библиотека позволяет создавать web-приложения. Мы можем
+              создать максимально интерактивный продукт именно под ваши цели
+            </p>
+          </div>
+
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/node.js.svg"
+                alt="nodeJS icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">Node.js</h3>
+            <p class="card__text">
+              Эта платформа позволяет создавать бэкенд для вашего продукта -
+              “мозги”, которые будут выполнять действия, которые пользователь не
+              видит
+            </p>
+          </div>
+
+          <div class="card">
+            <picture class="card__img-wrapper">
+              <img
+                src="./icons/skills/mongo.db.svg"
+                alt="mongoDB icon"
+                class="card__img"
+              />
+            </picture>
+            <h3 class="title title_fz14 card__title">Mongo.db</h3>
+            <p class="card__text">
+              Это нереляционная база данных, которая будет хранить данные вашего
+              сайта или приложения
+            </p>
+          </div>
+        </div>
+
+        <div class="tools__progress-bars">
+          <div class="progress-bar">
+            <div class="progress-bar__wrapper">
+              <h3 class="title title_fz14 subtitle progress-bar__title">
+                Создание сайтов
+              </h3>
+              <p class="progress-bar__percentage">100%</p>
+            </div>
+            <div class="progress-bar__scale">
+              <div class="progress-bar__scale_full"></div>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-bar__wrapper">
+              <h3 class="title title_fz14 subtitle progress-bar__title">
+                Создание приложений
+              </h3>
+              <p class="progress-bar__percentage">85%</p>
+            </div>
+            <div class="progress-bar__scale">
+              <div class="progress-bar__scale_full"></div>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-bar__wrapper">
+              <h3 class="title title_fz14 subtitle progress-bar__title">
+                Работа с данными
+              </h3>
+              <p class="progress-bar__percentage">90%</p>
+            </div>
+            <div class="progress-bar__scale">
+              <div class="progress-bar__scale_full"></div>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-bar__wrapper">
+              <h3 class="title title_fz14 subtitle progress-bar__title">
+                Креативность
+              </h3>
+              <p class="progress-bar__percentage">75%</p>
+            </div>
+            <div class="progress-bar__scale">
+              <div class="progress-bar__scale_full"></div>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-bar__wrapper">
+              <h3 class="title title_fz14 subtitle progress-bar__title">
+                Создание дизайна
+              </h3>
+              <p class="progress-bar__percentage">90%</p>
+            </div>
+            <div class="progress-bar__scale">
+              <div class="progress-bar__scale_full"></div>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-bar__wrapper">
+              <h3 class="title title_fz14 subtitle progress-bar__title">
+                Soft skills
+              </h3>
+              <p class="progress-bar__percentage">95%</p>
+            </div>
+            <div class="progress-bar__scale">
+              <div class="progress-bar__scale_full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="container">
+        <p class="title title_fz16 subtitle_centred">Портфолио</p>
+        <h2 class="title title_fz36 title_centred">Мои работы</h2>
+        <div class="divider divider_centred"></div>
+        <div class="portfolio__wrapper">
+          <a href="#" class="portfolio__item portfolio__item_1"
+            ><img
+              src="./img/works/uber.jpg"
+              alt="car door photo"
+              class="portfolio__img"
+          /></a>
+          <a href="#" class="portfolio__item portfolio__item_2"
+            ><img
+              src="./img/works/pulse.jpg"
+              alt="running girl photo"
+              class="portfolio__img"
+          /></a>
+          <a href="#" class="portfolio__item portfolio__item_3"
+            ><img
+              src="./img/works/bread.jpg"
+              alt="bread photo"
+              class="portfolio__img"
+          /></a>
+          <a href="#" class="portfolio__item portfolio__item_4"
+            ><img
+              src="./img/works/plans.jpg"
+              alt="notebook with plans photo"
+              class="portfolio__img"
+          /></a>
+          <a href="#" class="portfolio__item portfolio__item_5"
+            ><img
+              src="./img/works/ipad.jpg"
+              alt="ipad photo"
+              class="portfolio__img"
+          /></a>
+          <a href="#" class="portfolio__item portfolio__item_6">
+            <img
+              src="./img/works/mac.jpg"
+              alt="macbook photo"
+              class="portfolio__img"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="price-list">
+      <div class="container">
+        <p class="title title_fz16 subtitle_centred price-list__title">
+          Прайс-лист
+        </p>
+        <div class="divider divider_centred"></div>
+        <div class="price-list__wrapper">
+          <div class="item">
+            <h3 class="title title_fz14 item__heading">Landing-page</h3>
+            <p class="item__price">от 8000 руб.</p>
+            <p class="item__text">
+              Одностраничный сайт для презентации услуг/товаров/...
+            </p>
+          </div>
+
+          <div class="item">
+            <h3 class="title title_fz14 item__heading">Web-приложение</h3>
+            <p class="item__price">от 28000 руб.</p>
+            <p class="item__text">
+              Приложение внутри браузера для лучшего комфорта
+            </p>
+          </div>
+
+          <div class="item">
+            <h3 class="title title_fz14 item__heading">Корпоративный сайт</h3>
+            <p class="item__price">от 20000 руб.</p>
+            <p class="item__text">Сайт для вашего бизнеса или компании</p>
+          </div>
+
+          <div class="item">
+            <h3 class="title title_fz14 item__heading">
+              Android/IOS Приложение
+            </h3>
+            <p class="item__price">от 25000 руб.</p>
+            <p class="item__text">Приложение для смартфона любой ОС</p>
+          </div>
+
+          <div class="item">
+            <h3 class="title title_fz14 item__heading">Интернет-магазин</h3>
+            <p class="item__price">от 30000 руб.</p>
+            <p class="item__text">Инструмент для ваших продаж в сети</p>
+          </div>
+
+          <div class="item">
+            <h3 class="title title_fz14 item__heading">Дизайн</h3>
+            <p class="item__price">Индивидуально</p>
+            <p class="item__text">
+              Создам дизайн для вашего сайта/приложения...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__wrapper">
+          <div class="contacts__img">
+            <img src="./img/main_photo.jpg" alt="girl with coffee cup" />
+          </div>
+          <div class="contacts__descr">
+            <p class="title title_fz16 subtitle contacts__subtitle">Контакты</p>
+            <h2 class="title title_fz36 contacts__title">Свяжитесь со мной</h2>
+            <div class="divider"></div>
+            <h3 class="title title_fz14 contacts__text">
+              Любым удобным для вас способом:
+            </h3>
+            <div class="contacts__social">
+              <a href="#" class="contacts__link"
+                ><img src="./icons/menu/Facebook.svg" alt="facebook" /></a
+              ><a href="" class="contacts__link"
+                ><img src="./icons/social/telegram.svg" alt="telegram" /></a
+              ><a href="" class="contacts__link"
+                ><img src="./icons/social/instagram.svg" alt="instagram"
+              /></a>
+            </div>
+            <h3 class="title title_fz14 contacts__text">
+              Или оставьте ваши данные и я сама вам напишу:
+            </h3>
+
+            <form action="#" class="contacts__form">
+              <div class="contacts__input">
+                <input required name="name" id="name" type="text" />
+                <label for="name">Ваше имя</label>
+              </div>
+              <div class="contacts__input">
+                <input required name="email" id="email" type="email" />
+                <label for="email">Ваша почта</label>
+              </div>
+              <div class="contacts__textarea">
+                <textarea name="text" id="text"></textarea>
+                <label for="text">Ваше сообщение</label>
+              </div>
+              <div class="contacts__triggers">
+                <button class="btn contacts__btn">Отправить сообщение</button>
+                <div class="contacts__policy">
+                  <input required name="policy" type="checkbox" />
+                  <span>
+                    Я согласен(а) с
+                    <a href="./policy.html">политикой конфиденциальности</a>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

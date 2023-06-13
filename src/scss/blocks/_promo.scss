@@ -1,0 +1,24 @@
+.promo {
+  min-height: 100vh;
+  position: relative;
+  background: url('../img/main_bg.jpg') no-repeat 50% / cover;
+  padding-top: 20.5rem;
+  &__title {
+    max-width: 53.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 4.4rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: inherit;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

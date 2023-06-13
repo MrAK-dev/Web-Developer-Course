@@ -1,0 +1,82 @@
+.experience {
+  padding-top: 12rem;
+
+  &__wrapper {
+    padding: 0 9rem 0 6.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 425px);
+    column-gap: 15.5rem;
+  }
+
+  &__column {
+    &-title {
+      position: relative;
+      padding-left: 3.5rem;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+      }
+    }
+
+    ul {
+      list-style: none;
+      li {
+        position: relative;
+        &:after {
+          content: '';
+          width: 1px;
+          height: calc(100% + 16px);
+          position: absolute;
+          top: -13px;
+          left: 0;
+          background-color: #000;
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    &:before {
+      content: '';
+      height: 1px;
+      width: 45px;
+      background-color: #000;
+      position: absolute;
+      top: 68px;
+    }
+    &-head {
+      position: relative;
+      padding: 45px 0 0 100px;
+      margin-bottom: 1.2rem;
+    }
+    &-body {
+      padding-left: 43px;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+    &-icon {
+      position: absolute;
+      top: 50px;
+      left: 45px;
+      @include before-circle;
+      img {
+        position: absolute;
+        top: 14px;
+        left: 17px;
+      }
+    }
+    &-location {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      margin-bottom: 0;
+    }
+  }
+}

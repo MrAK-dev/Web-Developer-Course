@@ -1,0 +1,102 @@
+.contacts {
+  padding: 12rem 0 9rem 0;
+
+  &__wrapper {
+    padding: 0 3.5rem 0 5.2rem;
+    display: grid;
+    grid-template-columns: 400px 585px;
+    justify-content: space-between;
+  }
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__descr {
+    padding-top: 6px;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__social {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2.5rem;
+  }
+  &__link {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    grid-template-rows: 45px 190px 45px;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+
+    label {
+      font-size: 1.2rem;
+      padding: 0 8px;
+      margin-bottom: 0;
+      display: block;
+      position: absolute;
+      top: -9px;
+      left: 12px;
+      height: 18px;
+      background-color: #fff;
+    }
+  }
+  &__input {
+    position: relative;
+    input {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 0 2rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__textarea {
+    position: relative;
+    grid-column: 1 / 3;
+    textarea {
+      width: 100%;
+      height: 100%;
+      resize: none;
+      padding: 2rem;
+    }
+  }
+
+  &__triggers {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 3.5rem;
+  }
+
+  &__btn {
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  &__policy {
+    font-size: 1.2rem;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

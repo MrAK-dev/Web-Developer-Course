@@ -1,8 +1,17 @@
 @import './libs/bootstrap-reboot.min';
 @import './base/fonts';
-
-* {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+@import './base/variables';
+@import './base/mixins';
+@import './base/general';
+@import './blocks/title';
+@import './blocks/buttons';
+@import './blocks/promo';
+@import './blocks/sidepanel';
+@import './blocks/menu';
+@import './blocks/about';
+@import './blocks/experience';
+@import './blocks/tools';
+@import './blocks/portfolio';
+@import './blocks/price-list';
+@import './blocks/contacts';
+@import './blocks/media';
