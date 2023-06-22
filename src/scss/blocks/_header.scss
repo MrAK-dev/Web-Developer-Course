@@ -1,0 +1,43 @@
+.header {
+  &__content {
+    max-width: 1052px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    height: 82px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+  }
+}
+
+.menu {
+  overflow: auto;
+  &__list {
+    list-style: none;
+    li:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__link:link,
+  &__link:visited {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    &.active {
+      color: var(--color-primary);
+    }
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.icon-menu {
+  display: none;
+}

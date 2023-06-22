@@ -1,0 +1,40 @@
+.blog {
+  padding-top: 90px;
+  padding-bottom: 50px;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__article-name:link,
+  &__article-name:visited {
+    color: inherit;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: calc(44 / 30) * 100%;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease 0s;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__info {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__divider {
+    margin: 0 15px;
+  }
+  &__category {
+    color: #8685a4;
+  }
+}

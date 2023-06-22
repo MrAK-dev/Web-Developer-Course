@@ -1,0 +1,44 @@
+.article {
+  max-width: 700px;
+  padding: 0 10px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  &__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: calc(50 / 34) * 100%;
+    margin-bottom: 30px;
+  }
+  &__info {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  &__year {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 16px;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__category {
+    font-size: 20px;
+    line-height: calc(25 / 20) * 100%;
+    align-self: center;
+  }
+  &__text {
+    p {
+      @extend .text;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

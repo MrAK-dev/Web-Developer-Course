@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  padding: 50px 0;
+
+  &__social {
+    margin-bottom: 25px;
+  }
+  &__copy {
+    font-size: 14px;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  &__item {
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease 0s;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
