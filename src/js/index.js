@@ -28,7 +28,7 @@ window.onload = () => {
       !targetElement.closest('.search-form') &&
       document.querySelector('.search-form._active')
     ) {
-      // document.querySelector('.search-form').classList.remove('_active');
+      document.querySelector('.search-form').classList.remove('_active');
     }
     if (targetElement.classList.contains('products__more')) {
       getProducts(targetElement);
