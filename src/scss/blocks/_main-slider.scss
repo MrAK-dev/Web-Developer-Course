@@ -1,0 +1,218 @@
+.main-slider {
+  background-color: #fcf8f3;
+  &__container {
+    position: relative;
+    @media (min-width: 991.98px) {
+      &::before {
+        content: '';
+        background-color: #f9f1e7;
+        position: absolute;
+        top: 0;
+        right: 376px;
+        width: 100vw;
+        height: 100%;
+      }
+    }
+  }
+  &__body {
+    padding-top: 140px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 991.98px) {
+      padding-top: 80px;
+    }
+    @media (max-width: 767.98px) {
+      padding-top: 50px;
+    }
+    @media (min-width: 991.98px) {
+      display: flex;
+    }
+  }
+  &__content {
+    flex: 0 0 calc(494 / 1240) * 100%;
+    margin-bottom: 80px;
+    align-self: flex-start;
+    @media (max-width: 991.98px) {
+      margin: 0 -15px;
+    }
+  }
+  &__slider {
+    flex: 1 1 auto;
+    min-width: 0;
+    align-self: flex-end;
+    @media (min-width: 991.98px) {
+      padding-left: 32px;
+    }
+  }
+}
+
+.content-main {
+  position: relative;
+  z-index: 5;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  background: rgba(255, 255, 255, 0.72);
+  @media (min-width: 991.98px) {
+    padding: 60px;
+    @supports (
+      (-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))
+    ) {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(31px);
+    }
+  }
+  @media (max-width: 767.98px) {
+    padding: 1px;
+  }
+  &__title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 120%;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    color: var(--color-gray);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+    @media (max-width: 767.98px) {
+      font-size: 16px;
+    }
+  }
+  &__button {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    min-height: 78px;
+    width: 100%;
+    background-color: var(--color-orange);
+    @media (max-width: 767.98px) {
+      font-size: 16px;
+      min-height: 45px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #966749;
+      }
+    }
+  }
+}
+
+.slider-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @media (max-width: 991.98px) {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+  &__controls {
+    margin-bottom: 20px;
+    align-self: stretch;
+    @media (max-width: 991.98px) {
+      margin-top: 10px;
+    }
+  }
+  &__body {
+    overflow: visible;
+    @media (min-width: 991.98px) {
+      @include adaptive-value('width', 934, 290, 1);
+    }
+    @media (max-width: 991.98px) {
+      margin: 0 -15px;
+    }
+  }
+  &__slide {
+    position: relative;
+  }
+  &__image {
+    position: relative;
+    padding-bottom: 59.1%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__content {
+    min-width: 295px;
+    max-height: 300px;
+    overflow: auto;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    @media (min-width: 767.98px) {
+      position: absolute;
+      min-width: 350px;
+      right: 40px;
+      bottom: 40px;
+      @supports (
+        (-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))
+      ) {
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(31px);
+      }
+    }
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 120%;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  &__text {
+    color: var(--color-gray);
+    font-size: 16px;
+    line-height: 150%;
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+  &__price {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 150%;
+    &::before {
+      margin-left: 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+.controls-slider-main {
+  display: flex;
+  align-items: center;
+  &__dots {
+    flex: 1 1 auto;
+    @media (min-width: 991.98px) {
+      padding-right: 20px;
+    }
+    @media (max-width: 991.98px) {
+      justify-content: center;
+    }
+  }
+  &__arrows {
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+}

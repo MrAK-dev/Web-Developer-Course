@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.woff') format('woff'),
+    url('../fonts/icons.woff2#icons') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='_icon-'],
+[class*=' _icon-'] {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow-down:before {
+  content: '\e900';
+}
+._icon-arrow-link:before {
+  content: '\e901';
+}
+._icon-cart:before {
+  content: '\e902';
+}
+._icon-favorite:before {
+  content: '\e903';
+}
+._icon-location:before {
+  content: '\e904';
+}
+._icon-phone:before {
+  content: '\e905';
+}
+._icon-search:before {
+  content: '\e906';
+}
+._icon-send:before {
+  content: '\e907';
+}
+._icon-share:before {
+  content: '\e908';
+}

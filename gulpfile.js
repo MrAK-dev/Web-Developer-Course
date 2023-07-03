@@ -12,6 +12,7 @@ import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { icons } from './gulp/tasks/icons.js';
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
+import { json } from './gulp/tasks/json.js';
 
 global.app = {
   isBuild: process.argv.includes('--build'),
@@ -27,13 +28,14 @@ const watcher = () => {
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
   gulp.watch(path.watch.icons, icons);
+  gulp.watch(path.watch.json, json);
 };
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 const mainTasks = gulp.series(
   fonts,
-  gulp.parallel(html, scss, js, images, icons)
+  gulp.parallel(html, scss, js, images, icons, json)
 );
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
