@@ -1,0 +1,58 @@
+.advantages {
+  padding: 8rem 0;
+  @media (max-width: 991.98px) {
+    padding: 5rem 0;
+  }
+  @media (max-width: 767.98px) {
+    padding: 4rem 0;
+  }
+
+  &__heading {
+    margin-bottom: 5rem;
+    @media (max-width: 767.98px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+  }
+  &__column {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    flex: 0 1 25%;
+    @media (max-width: 1033px) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: 560px) {
+      flex: 0 1 100%;
+    }
+  }
+  &__item {
+    background-color: #fff;
+    padding: 3rem;
+    text-align: center;
+    font-weight: 700;
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__icon {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__value {
+    font-size: 4rem;
+    line-height: calc(57 / 40 * 100%);
+    letter-spacing: 0.2px;
+  }
+  &__text {
+    color: var(--color-gray);
+    font-size: 1.6rem;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.1px;
+  }
+}

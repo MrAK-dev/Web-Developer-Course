@@ -1,0 +1,115 @@
+.footer {
+  &__top {
+    padding: 3rem 0;
+    background-color: var(--color-primary);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+  }
+  &__column {
+    flex: 0 1 16.667%;
+    padding: 2rem 1.5rem;
+    &:last-child {
+      flex: 0 1 33.334%;
+    }
+    @media (max-width: 991.98px) {
+      flex: 0 1 25%;
+      &:last-child {
+        flex: 0 1 100%;
+      }
+    }
+    @media (max-width: 700px) {
+      flex: 0 1 50%;
+    }
+  }
+  &__label {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.1px;
+    margin-bottom: 2rem;
+  }
+  &__bottom {
+    padding: 2.5rem 0;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+    }
+  }
+  &__copy {
+    color: var(--color-gray);
+    line-height: calc(24 / 14 * 100%);
+    font-weight: 600;
+    @media (max-width: 767.98px) {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu-footer {
+  color: #fff;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__link {
+    color: inherit;
+    display: inline-block;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    color: #fff;
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
+    padding-left: 3.4rem;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &_phone {
+      background: url('../img/footer/icons/01.svg') 0 0 no-repeat;
+    }
+    &_map {
+      background: url('../img/footer/icons/02.svg') 0 0 no-repeat;
+    }
+    &_email {
+      background: url('../img/footer/icons/03.svg') 0 0 no-repeat;
+    }
+  }
+}
+.social {
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

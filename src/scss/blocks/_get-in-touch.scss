@@ -1,0 +1,95 @@
+.get-in-touch {
+  padding-top: 8rem;
+  padding-bottom: 13.5rem;
+  @media (max-width: 991.98px) {
+    padding: 5rem 0;
+  }
+
+  &__heading {
+    margin-bottom: 8rem;
+    @media (max-width: 991.98px) {
+      margin-bottom: 5rem;
+    }
+    @media (max-width: 767.98px) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__items {
+    margin: 0 -15px;
+    @media (min-width: 991.98px) {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__item {
+    flex: 0 1 33.333%;
+  }
+}
+
+.item-get-in-touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 5rem 1.5rem;
+  & > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  &__emails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__email {
+    color: inherit;
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: calc(24 / 16 * 100%);
+    letter-spacing: 0.1px;
+  }
+  &__button {
+    color: var(--color-orange);
+    font-weight: 600;
+    min-height: 44px;
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--color-orange);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    line-height: calc(24 / 14 * 100%);
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-orange);
+    }
+  }
+  &_active {
+    color: var(--color-white);
+    padding: 8rem 1.5rem;
+    background-color: var(--color-primary);
+    @media (max-width: 991.98px) {
+      padding: 5rem 1.5rem;
+    }
+    .item-get-in-touch__button {
+      color: var(--color-white);
+      border: 1px solid var(--color-white);
+      &:hover {
+        border: 1px solid var(--color-orange);
+      }
+    }
+  }
+}

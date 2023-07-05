@@ -1,0 +1,21 @@
+.clients {
+  padding: 5rem 0;
+  @media (max-width: 950px) {
+    padding: 3rem 0;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    padding: 0.8rem 1.5rem;
+    flex: 0 1 16.6667%;
+    text-align: center;
+    min-width: 140px;
+    img {
+      max-width: 100%;
+    }
+  }
+}

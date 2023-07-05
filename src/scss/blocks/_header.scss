@@ -1,0 +1,128 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    min-height: 10.4rem;
+    align-items: center;
+    @media (max-width: 767.98px) {
+      min-height: 7rem;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    color: inherit;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  &__menu {
+    margin-left: 13.3rem;
+    @media (max-width: 767.98px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.menu {
+  @media (max-width: 767.98px) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: -100%;
+    background-color: #fcf8f3;
+    transition: left 0.3s ease 0s;
+    &::before {
+      content: '';
+      position: fixed;
+      width: 100%;
+      height: 50px;
+      top: 0;
+      left: -100%;
+      background-color: #fcf8f3;
+      transition: left 0.3s ease 0s;
+      z-index: 2;
+    }
+    &.active {
+      left: 0;
+      &::before {
+        left: 0;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 2.1rem;
+    flex-wrap: wrap;
+    @media (max-width: 767.98px) {
+      position: relative;
+      z-index: 5;
+      flex-direction: column;
+      padding-left: 1.5rem;
+      padding-top: 1.8rem;
+    }
+  }
+  &__link,
+  &__link:link,
+  &__link:visited {
+    color: var(--color-gray);
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
+    transition: 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    @media (max-width: 767.98px) {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.icon-menu {
+  display: none;
+  @media (max-width: 767.98px) {
+    position: relative;
+    display: block;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    span {
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0px;
+      background-color: #000;
+      transition: all 0.3s ease 0s;
+      &:first-child {
+        top: 0;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &.active {
+      span {
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
+}
