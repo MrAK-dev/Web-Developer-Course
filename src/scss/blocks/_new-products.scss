@@ -1,0 +1,103 @@
+.new-products {
+  background: url('../img/new-products/bg.jpg') bottom / cover no-repeat;
+  position: relative;
+  @include adaptive-value('padding-top', 55, 35, 1);
+  @include adaptive-value('padding-bottom', 55, 20, 1);
+  &::before {
+    content: '';
+    background-color: #fff;
+    height: 4.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(1030 / 1920 * 100%);
+  }
+  &__container {
+    @media (min-width: 62em) {
+      display: grid;
+      grid-template-columns: 40rem 1fr;
+    }
+  }
+  &__body {
+    @include adaptive-value('padding-right', 70, 30, 1);
+  }
+  &__section {
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__text {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    letter-spacing: 0.54px;
+    &:not(:last-child) {
+      @include adaptive-value('margin-bottom', 60, 20, 1);
+    }
+  }
+  &__content {
+    max-width: 120rem;
+    padding-top: 3.7rem;
+  }
+
+  &__swiper {
+    &:not(:last-child) {
+      @include adaptive-value('margin-bottom', 50, 20, 1);
+    }
+  }
+
+  &__dots {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    transform: translate(0px, 10%);
+    margin: 0 auto;
+    overflow: hidden;
+    .swiper-pagination-bullet {
+      margin: 0 0.75rem;
+      cursor: pointer;
+      height: 3rem;
+      width: 1.8rem;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate((0, -50%));
+        width: 100%;
+        height: 0.2rem;
+        background-color: #898989;
+        transition: all 0.3s ease 0s;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate((0px, -50%));
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--color-orange);
+        opacity: 0;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      &::after {
+        background-color: var(--color-orange);
+      }
+      &::before {
+        opacity: 1;
+        transition: left 3s linear 0s;
+        left: 0.8rem;
+      }
+    }
+  }
+}

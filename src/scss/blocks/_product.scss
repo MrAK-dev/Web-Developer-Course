@@ -1,0 +1,224 @@
+.product {
+  &__main {
+    @include adaptive-value('margin-bottom', 120, 40, 1);
+  }
+  &__info {
+    @include adaptive-value('margin-bottom', 120, 40, 1);
+  }
+}
+
+.main-product {
+  @media (min-width: 62em) {
+    display: grid;
+    grid-template-columns: calc(785 / 1600 * 100%) 1fr;
+    align-items: start;
+  }
+
+  &__images {
+    @media (min-width: 62em) {
+      padding-right: 3rem;
+    }
+  }
+}
+
+.images-product {
+  &__swiper {
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__slide-ibg {
+    padding-bottom: calc(577 / 754 * 100%);
+  }
+}
+
+.thumbs-images {
+  &__slide-ibg {
+    cursor: pointer;
+    padding-bottom: calc(177 / 754 * 100%);
+    opacity: 0.5;
+    transition: all 0.3s ease 0s;
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}
+
+.body-product {
+  background-color: #fefefe;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  @include adaptive-value('padding', 30, 15, 1);
+  &__header {
+    border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+    padding-bottom: 3rem;
+  }
+  &__table {
+    border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+    padding: 3rem 0;
+  }
+  &__options {
+    border-bottom: 1px solid rgba(20, 20, 20, 0.15);
+    padding: 3rem 0;
+  }
+  &__actions {
+    padding-top: 3rem 0;
+  }
+}
+
+.header-product {
+  &__line {
+    display: flex;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 48em) {
+      flex-wrap: wrap;
+    }
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    flex: 1 1 100%;
+  }
+  &__link {
+    color: inherit;
+    font-size: 2.4rem;
+  }
+}
+
+.table-product {
+  display: grid;
+  gap: 2rem;
+  @media (min-width: 48em) {
+    grid-template-columns: 20rem 1fr;
+  }
+  &__value {
+    color: rgba(20, 20, 20, 0.5);
+  }
+}
+
+.options-product {
+  display: grid;
+  gap: 2rem;
+  @media (min-width: 48em) {
+    grid-template-columns: 20rem 1fr;
+  }
+  &__label {
+    align-self: center;
+  }
+  &__value {
+    select {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 1px solid rgba(20, 20, 20, 0.5);
+    }
+  }
+}
+
+.actions-product {
+  &__price {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    display: inline-block;
+    background: url('../img/icons/rub.svg') right no-repeat;
+    padding-right: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__row {
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 95em) {
+      flex-direction: column;
+    }
+  }
+  &__buttons {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @media (min-width: 95em) {
+      justify-content: flex-end;
+    }
+  }
+  &__cart {
+    min-width: 26rem;
+    span {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      small {
+        font-family: 'Montserat';
+        font-size: 2rem;
+      }
+      &::before {
+        margin-left: 2rem;
+      }
+    }
+
+    @media (max-width: 30em) {
+      min-width: 100%;
+    }
+  }
+  &__button {
+    @media (max-width: 30em) {
+      width: 100%;
+    }
+  }
+}
+
+.quantity {
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(166, 166, 166, 0.45);
+  &__button {
+    flex: 0 0 5rem;
+    height: 5rem;
+    position: relative;
+    cursor: pointer;
+    background-color: #000;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 9px;
+      height: 1px;
+      margin-left: -0.45rem;
+      background-color: #a6a6a6;
+      transition: all 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        &::before,
+        &::after {
+          background-color: rgba(166, 166, 166, 0.5);
+        }
+      }
+    }
+    &_plus {
+      &::after {
+        height: 9px;
+        width: 1px;
+        transform: translate(4px, -4px);
+      }
+    }
+  }
+  &__input {
+    height: 100%;
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  }
+}

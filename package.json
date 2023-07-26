@@ -21,6 +21,7 @@
   "homepage": "https://github.com/MrAK-dev/Web-Developer-Course#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "css-loader": "^6.8.1",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -47,9 +48,15 @@
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
     "sass": "^1.62.1",
+    "style-loader": "^3.3.3",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
     "webpack": "^5.84.1",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "nouislider": "^15.7.1",
+    "swiper": "^10.0.4",
+    "tippy.js": "^6.3.7"
   }
 }

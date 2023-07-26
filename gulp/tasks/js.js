@@ -17,6 +17,14 @@ export const js = () => {
         output: {
           filename: 'index.min.js',
         },
+        module: {
+          rules: [
+            {
+              test: /\.css$/i,
+              use: ['style-loader', 'css-loader'],
+            },
+          ],
+        },
       })
     )
     .pipe(app.gulp.dest(app.path.build.js))
