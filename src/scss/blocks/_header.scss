@@ -1,0 +1,136 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  &__container {
+    min-height: 11.4rem;
+    display: flex;
+    align-items: center;
+    @media (max-width: 62em) {
+      min-height: 8rem;
+    }
+  }
+  &__logo {
+    position: relative;
+    z-index: 5;
+    @media (max-width: 30em) {
+      flex: 0 0 4rem;
+      overflow: hidden;
+    }
+  }
+  &__menu {
+    flex: 1 1 auto;
+  }
+  &__actions {
+    flex: 0 0 25rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    @media (max-width: 62em) {
+      flex: 0 0 17rem;
+    }
+  }
+}
+
+.menu {
+  color: #000;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  @media (max-width: 62em) {
+    padding-right: 3rem;
+  }
+  &__body {
+    @media (max-width: 48em) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      padding: 9rem 1.5rem 3rem 1.5rem;
+      background-color: #fff;
+      overflow: auto;
+      transition: left 0.3s ease 0s;
+      &.menu-open {
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 4rem;
+    @media (max-width: 62em) {
+      gap: 3rem;
+    }
+    @media (max-width: 48em) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 48em) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.icon-menu {
+  display: none;
+  @media (max-width: 48em) {
+    position: relative;
+    display: block;
+    width: 3rem;
+    height: 1.8rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    span,
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transition: all 0.3s ease 0s;
+    }
+    &::before {
+      top: 2px;
+    }
+    &::after {
+      bottom: 0px;
+    }
+    &.menu-open {
+      span {
+        transform: scale(0);
+      }
+      &::before {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+      }
+      &::after {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
+  }
+}

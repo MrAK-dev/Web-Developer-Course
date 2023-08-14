@@ -1,0 +1,26 @@
+.button {
+  color: #fcfdfe;
+  font-family: 'Raleway';
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  background-color: var(--color-main);
+  display: inline-block;
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #f37a82;
+    }
+  }
+  &_blue {
+    background-color: var(--color-blue);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #70a3f7;
+      }
+    }
+  }
+}

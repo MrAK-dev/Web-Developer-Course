@@ -1,0 +1,95 @@
+.healthcare {
+  padding: 8rem 0 3rem 0;
+  @media (max-width: 62em) {
+    padding: 3rem 0 3rem 0;
+  }
+  &__block-text {
+    margin-bottom: 4.5rem;
+  }
+  &__items {
+    display: flex;
+    margin: 0 auto;
+    // gap: 7.2rem;
+    // margin: 0 -3.6rem;
+    @media (max-width: 62em) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  &__column {
+    flex: 0 1 33.333%;
+    padding: 0 3.6rem;
+    position: relative;
+
+    @media (max-width: 68em) {
+      padding: 0 1.5rem;
+    }
+
+    &_1::before,
+    &_1::after,
+    &_2::after,
+    &_3::after {
+      content: '';
+      position: absolute;
+      border-radius: 16px;
+      background-color: var(--color-main);
+      z-index: -1;
+    }
+
+    &_1::before {
+      width: 6.6rem;
+      height: 6.6rem;
+      left: 1.5rem;
+      bottom: -3.5rem;
+      transform: rotate(-30deg);
+    }
+    &_1::after {
+      width: 9.7rem;
+      height: 9.7rem;
+      top: 3rem;
+      right: -1rem;
+      transform: rotate(30deg);
+      border-radius: 30px;
+    }
+    &_2::after {
+      width: 12.7rem;
+      height: 12.7rem;
+      right: -4rem;
+      bottom: -3.5rem;
+      transform: rotate(55deg);
+      border-radius: 30px;
+    }
+    &_3::after {
+      width: 6.5rem;
+      height: 6.5rem;
+      top: -3rem;
+      right: 1.2rem;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.item-healthcare {
+  border-radius: 8px;
+  box-shadow: 0px 4px 18px 0px rgba(88, 126, 236, 0.18);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3.7rem 1.8rem;
+  height: 100%;
+  &__icon {
+    margin-bottom: 5.8rem;
+  }
+  &__title {
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.38;
+  }
+  &__text {
+    max-width: 24.2rem;
+    letter-spacing: 0.96px;
+  }
+}
