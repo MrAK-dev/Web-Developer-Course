@@ -1,0 +1,130 @@
+.main {
+  padding-bottom: 8rem;
+  @media (max-width: 62em) {
+    padding-bottom: 5rem;
+  }
+  @media (max-width: 48em) {
+    padding-bottom: 3rem;
+  }
+  &__container {
+    display: flex;
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    align-self: flex-end;
+    padding-top: 12rem;
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+  }
+
+  &__heading {
+    font-size: 5.6rem;
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__text {
+    color: var(--color-gray);
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 40rem;
+    &:not(:last-child) {
+      margin-bottom: 3.3rem;
+    }
+  }
+
+  &__decor {
+    flex: 0 1 50%;
+  }
+  &__image {
+    margin-right: -13.5rem;
+    max-width: 67.2rem;
+    position: relative;
+    padding-bottom: 97.6%;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 0 160px 375px;
+    }
+    &::after {
+      content: '';
+      background: url('../img/main/decor.svg') 0 0 no-repeat;
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      right: 36.3%;
+      bottom: 0;
+      transform: translate(0, 50%);
+    }
+  }
+}
+
+.actions-main {
+  display: flex;
+  align-items: center;
+  column-gap: 4rem;
+  row-gap: 1.5rem;
+  &__button {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--color-orange);
+    padding: 2.2rem 4.8rem;
+    border-radius: 40px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #d36134;
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 68em) {
+  .main__image img {
+    width: 100%;
+  }
+  .main__content {
+    flex: 0 0 60%;
+    padding-bottom: 0;
+  }
+  .main__decor {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 48em) {
+  .main__content {
+    flex: 1 1 100%;
+    padding-right: 0;
+    padding-top: 6rem;
+  }
+  .main__decor {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 4.4rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .actions-main {
+    flex-wrap: wrap;
+    justify-content: center;
+    &__button {
+      flex: 1 1 100%;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.footer {
+  background-color: #eee;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+
+  &__body {
+    margin-bottom: 8rem;
+  }
+
+  &__copy {
+    color: rgba(18, 18, 18, 0.6);
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+.body-footer {
+  display: flex;
+  gap: 5rem;
+  padding: 0 4rem;
+  &__column {
+    &_full {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-height: 4rem;
+    &:not(:last-child) {
+      margin-bottom: 2.8rem;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__link {
+    color: var(--color-gray);
+    position: relative;
+    padding-left: 4.2rem;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &_email {
+      &::before {
+        background: url('../img/footer/sms.svg') no-repeat;
+      }
+    }
+
+    &_location {
+      &::before {
+        background: url('../img/footer/location.svg') no-repeat;
+      }
+    }
+  }
+}
+.menu-footer {
+  display: flex;
+  gap: 12rem;
+  justify-content: center;
+
+  &__title {
+    color: var(--color-black);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__link {
+    color: rgba(18, 18, 18, 0.6);
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.social-footer {
+  &__title {
+    color: var(--color-black);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  &__items {
+    display: flex;
+    gap: 3.2rem;
+  }
+}
+
+@media (max-width: 62em) {
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .body-footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__column:first-child {
+      flex: 1 1 100%;
+    }
+    &__column {
+      &_full {
+        flex: 0 1 50%;
+      }
+    }
+  }
+  .menu-footer {
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .body-footer {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+}

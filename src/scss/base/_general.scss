@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:root {
+  --color-gray: #666;
+  --color-black: #121212;
+  --color-orange: #ff6428;
+}
+
+html {
+  /* font-size: 10px; */
+  /*  10px / 16px = .625 = 62.5% */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Poppins;
+  color: var(--color-gray);
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 400;
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+[class*='__container'] {
+  max-width: 123rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-family: 'Cal Sans';
+  color: var(--color-black);
+  font-size: 4.4rem;
+  font-weight: 600;
+  span {
+    color: var(--color-orange);
+  }
+  @media (max-width: 48em) {
+    font-size: 3.8rem;
+  }
+}
