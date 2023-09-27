@@ -1,0 +1,130 @@
+.pathway {
+  padding: 10rem 0;
+
+  &__container {
+    display: flex;
+    row-gap: 3rem;
+  }
+
+  &__image {
+    flex: 0 0 calc(694 / 1420 * 100%);
+    .image-block__circle {
+      top: auto;
+      right: auto;
+      left: 0;
+      bottom: 0;
+    }
+    .image-block__circle_1 {
+      &::before {
+        transform: translate(calc(-50% + 1.8rem), 20%);
+      }
+    }
+    .image-block__circle_2 {
+      &::before {
+        transform: translate(calc(-50% + 1.8rem), 6%);
+      }
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    padding-left: 12.6rem;
+  }
+
+  &__heading {
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__text {
+    line-height: 1.7;
+    &:not(:last-child) {
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  &__spollers {
+    display: grid;
+    gap: 2.4rem;
+  }
+}
+
+.spollers-pathway {
+  &__item {
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  &__title {
+    font-size: 2.4rem;
+    line-height: 1.8;
+    background-color: transparent;
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 2.4rem 3rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::after {
+      content: '';
+      background: url('../img/icons/arrow-down.svg') center / 100% no-repeat;
+      flex: 0 0 2.4rem;
+      height: 2.4rem;
+      transition: all 0.3s ease 0s;
+    }
+
+    &._spoller-active {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__body {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    padding: 0 3rem 2.4rem 3rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (max-width: 68em) {
+  .pathway {
+    &__heading {
+      font-size: 6rem;
+    }
+  }
+}
+
+@media (max-width: 62em) {
+  .pathway {
+    padding: 0;
+    &__heading {
+      font-size: 4.5rem;
+    }
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__content {
+      padding: 0;
+    }
+  }
+  .image-block_pathway {
+    align-self: center;
+  }
+}
+
+@media (max-width: 48em) {
+  .pathway {
+    &__heading {
+      font-size: 3rem;
+    }
+  }
+  .spollers-pathway {
+    &__title {
+      font-size: 1.8rem;
+    }
+  }
+}

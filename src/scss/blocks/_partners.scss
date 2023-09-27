@@ -1,0 +1,30 @@
+.partners {
+  padding-bottom: 20rem;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 69em) {
+  .partners {
+    &__container {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 62em) {
+  .partners {
+    padding-bottom: 5rem;
+  }
+}

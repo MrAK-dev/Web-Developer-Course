@@ -1,0 +1,141 @@
+.main-block {
+  &__container-big {
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding-top: 25rem;
+    padding-bottom: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__heading {
+    max-width: 92rem;
+    &:not(:last-child) {
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__text {
+    max-width: 72.5rem;
+    line-height: 1.8;
+    &:not(:last-child) {
+      margin-bottom: 4.8rem;
+    }
+  }
+}
+
+.icons-main-block {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58.5rem;
+    height: 58.5rem;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid var(--color-white);
+    }
+
+    &_1 {
+      &::before {
+        transform: translate(calc(-50% - 2.8rem), -37%);
+      }
+    }
+    &_2 {
+      &::before {
+        transform: translate(calc(-50% + 2.7rem), -46%);
+      }
+    }
+  }
+  &__item {
+    position: absolute;
+    &_1 {
+      top: calc(675 / 974 * 100%);
+      left: 1.5rem;
+    }
+
+    &_2 {
+      top: calc(380 / 974 * 100%);
+      left: calc(237 / 1620 * 100%);
+    }
+
+    &_3 {
+      top: calc(757 / 974 * 100%);
+      left: calc(403 / 1620 * 100%);
+    }
+
+    &_4 {
+      top: calc(134 / 974 * 100%);
+      left: calc(1149 / 1620 * 100%);
+    }
+
+    &_5 {
+      top: calc(420 / 974 * 100%);
+      left: calc(1325 / 1620 * 100%);
+    }
+
+    &_6 {
+      top: calc(776 / 974 * 100%);
+      left: calc(1321 / 1620 * 100%);
+    }
+
+    &_7 {
+      top: calc(367 / 974 * 100%);
+      right: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 62em) {
+  .main-block {
+    &__content {
+      padding-top: 15rem;
+      padding-bottom: 5rem;
+    }
+    &__heading {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    &__text {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .icons-main-block {
+    opacity: 0.3;
+    &__circle {
+      width: 35rem;
+      height: 35rem;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  .main-block {
+    &__form {
+      width: 100%;
+    }
+  }
+}

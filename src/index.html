@@ -4,9 +4,572 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FarmVest</title>
     <link rel="stylesheet" href="./css/style.min.css" />
     <script src="./js/index.min.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container-big">
+          <a class="header__logo" href=""
+            ><img src="./img/logo.svg" alt="logo"
+          /></a>
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">About</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">Features</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">How it works</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="header__actions">
+            <button
+              class="header__button button button_transparent"
+              type="button"
+            >
+              Sign In
+            </button>
+            <button
+              class="header__button button button"
+              type="button"
+              data-da=".menu__body,767.98"
+            >
+              Get Started
+            </button>
+            <button class="icon-menu" type="button">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__main main-block">
+          <div class="main-block__container-big" data-prlx-parent>
+            <div class="main-block__container">
+              <div class="main-block__content">
+                <h1 class="main-block__heading title">
+                  The easiest and fastest way to <span>Invest</span> in
+                  Agriculture
+                </h1>
+                <p class="main-block__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac
+                  etLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet,
+                  consectetur
+                </p>
+                <div class="main-block__form">
+                  <form class="form" action="#">
+                    <input
+                      class="form__input"
+                      type="email"
+                      required
+                      placeholder="Enter your email"
+                    />
+                    <button class="form__button button" type="submit">
+                      Get Started
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <div
+                class="main-block__icons icons-main-block"
+                data-prlx
+                data-direction="1"
+                data-coefficient="100"
+                data-smooth="1"
+              >
+                <div
+                  class="icons-main-block__circle icons-main-block__circle_1"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                ></div>
+                <div
+                  class="icons-main-block__circle icons-main-block__circle_2"
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                  data-prlx-mouse
+                  data-prlx-dxr
+                  data-prlx-dyr
+                ></div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_1"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                >
+                  <img src="./img/main-block/icons/01.svg" alt="Icon 1" />
+                </div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_2"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                  data-prlx-dxr
+                  data-prlx-dyr
+                >
+                  <img src="./img/main-block/icons/02.svg" alt="Icon 2" />
+                </div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_3"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                >
+                  <img src="./img/main-block/icons/03.svg" alt="Icon 3" />
+                </div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_4"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                  data-prlx-dxr
+                  data-prlx-dyr
+                >
+                  <img src="./img/main-block/icons/04.svg" alt="Icon 4" />
+                </div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_5"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                >
+                  <img src="./img/main-block/icons/05.svg" alt="Icon 5" />
+                </div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_6"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                  data-prlx-dxr
+                  data-prlx-dyr
+                >
+                  <img src="./img/main-block/icons/06.svg" alt="Icon 6" />
+                </div>
+                <div
+                  class="icons-main-block__item icons-main-block__item_7"
+                  data-prlx-mouse
+                  data-prlx-cx="10"
+                  data-prlx-cy="10"
+                >
+                  <img src="./img/main-block/icons/07.svg" alt="Icon 7" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page__partners partners">
+          <div class="partners__container">
+            <div class="partners__item">
+              <img src="./img/partners/01.svg" alt="MarketWatch Logo" />
+            </div>
+            <div class="partners__item">
+              <img src="./img/partners/02.svg" alt="Forbes Logo" />
+            </div>
+            <div class="partners__item">
+              <img src="./img/partners/03.svg" alt="BusinessInsider Logo" />
+            </div>
+            <div class="partners__item">
+              <img src="./img/partners/04.svg" alt="Fidelity Logo" />
+            </div>
+            <div class="partners__item">
+              <img src="./img/partners/05.svg" alt="Wired Logo" />
+            </div>
+          </div>
+        </div>
+
+        <section class="page__how how" data-prlx-mouse-wrapper>
+          <div class="how__container-big">
+            <div class="how__container">
+              <div class="how__content">
+                <h2 class="how__heading title">
+                  How <span> FarmVest</span> Works
+                </h2>
+                <p class="how__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac
+                  etLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet,
+                  consectetur
+                </p>
+                <ul class="how__steps steps-how">
+                  <li class="steps-how__item">
+                    <a class="steps-how__link" href="">
+                      <div class="steps-how__icon">
+                        <img src="./img/how/icons/01.svg" alt="Icon #1" />
+                      </div>
+                      <div class="steps-how__content">
+                        <h3 class="steps-how__heading">Download FarmVest</h3>
+                        <p class="steps-how__text">
+                          Start by downloading FarmVest app on your Android or
+                          IOS
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="steps-how__item">
+                    <a class="steps-how__link" href="">
+                      <div class="steps-how__icon">
+                        <img src="./img/how/icons/02.svg" alt="Icon #2" />
+                      </div>
+                      <div class="steps-how__content">
+                        <h3 class="steps-how__heading">Create account</h3>
+                        <p class="steps-how__text">
+                          Start by downloading FarmVest app on your Android or
+                          IOS
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="steps-how__item">
+                    <a class="steps-how__link" href="">
+                      <div class="steps-how__icon">
+                        <img src="./img/how/icons/03.svg" alt="Icon #3" />
+                      </div>
+                      <div class="steps-how__content">
+                        <h3 class="steps-how__heading">
+                          Link your bank account
+                        </h3>
+                        <p class="steps-how__text">
+                          Start by downloading FarmVest app on your Android or
+                          IOS
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="steps-how__item">
+                    <a class="steps-how__link" href="">
+                      <div class="steps-how__icon">
+                        <img src="./img/how/icons/04.svg" alt="Icon #4" />
+                      </div>
+                      <div class="steps-how__content">
+                        <h3 class="steps-how__heading">Start Investing</h3>
+                        <p class="steps-how__text">
+                          Start by downloading FarmVest app on your Android or
+                          IOS
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="how__image image-block">
+                <div class="image-block__item">
+                  <img src="./img/how/image.png" alt="Image of person" />
+                </div>
+                <div
+                  class="image-block__circle image-block__circle_1"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                ></div>
+                <div
+                  class="image-block__circle image-block__circle_2"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                  data-prlx-dxr
+                  data-prlx-dyr
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__pathway pathway" data-prlx-mouse-wrapper>
+          <div class="pathway__container-big">
+            <div class="pathway__container">
+              <div class="pathway__image image-block image-block_pathway">
+                <div class="image-block__item">
+                  <img src="./img/pathway/image.png" alt="Image of person" />
+                </div>
+                <div
+                  class="image-block__circle image-block__circle_1"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                ></div>
+                <div
+                  class="image-block__circle image-block__circle_2"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                  data-prlx-dxr
+                  data-prlx-dyr
+                ></div>
+              </div>
+              <div class="pathway__content">
+                <h2 class="pathway__heading title">
+                  Your <span>pathway</span> to Future Investment
+                </h2>
+                <p class="pathway__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac
+                  etLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet,
+                  consectetur
+                </p>
+                <div class="pathway__spollers spollers-pathway" data-spollers>
+                  <div class="spollers-pathway__item">
+                    <button
+                      class="spollers-pathway__title"
+                      type="button"
+                      data-spoller
+                    >
+                      What is FarmVest?
+                    </button>
+                    <div class="spollers-pathway__body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste voluptatibus hic architecto natus est velit eaque
+                      cumque nesciunt accusantium saepe, facilis totam numquam
+                      vel ab error officia laboriosam ullam quam.
+                    </div>
+                  </div>
+                  <div class="spollers-pathway__item">
+                    <button
+                      class="spollers-pathway__title"
+                      type="button"
+                      data-spoller
+                    >
+                      How safe is FarmVest
+                    </button>
+                    <div class="spollers-pathway__body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste voluptatibus hic architecto natus est velit eaque
+                      cumque nesciunt accusantium saepe, facilis totam numquam
+                      vel ab error officia laboriosam ullam quam.
+                    </div>
+                  </div>
+                  <div class="spollers-pathway__item">
+                    <button
+                      class="spollers-pathway__title"
+                      type="button"
+                      data-spoller
+                    >
+                      What do I gain from using FarmVest?
+                    </button>
+                    <div class="spollers-pathway__body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste voluptatibus hic architecto natus est velit eaque
+                      cumque nesciunt accusantium saepe, facilis totam numquam
+                      vel ab error officia laboriosam ullam quam.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__why why">
+          <div class="why__container-big">
+            <div class="why__container">
+              <div class="why__content">
+                <h2 class="why__heading title">
+                  Why choose <span>FarmVest</span>
+                </h2>
+                <p class="why__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac
+                </p>
+                <ul class="why__steps steps-why">
+                  <li class="steps-why__step">
+                    <div class="steps-why__number">1</div>
+                    <div class="steps-why__text">Real-time Checkup</div>
+                  </li>
+                  <li class="steps-why__step">
+                    <div class="steps-why__number">2</div>
+                    <div class="steps-why__text">Flexibility in Investment</div>
+                  </li>
+                  <li class="steps-why__step">
+                    <div class="steps-why__number">3</div>
+                    <div class="steps-why__text">Encrypted and Secured</div>
+                  </li>
+                  <li class="steps-why__step">
+                    <div class="steps-why__number">4</div>
+                    <div class="steps-why__text">Withdraw Anytime</div>
+                  </li>
+                </ul>
+                <button class="why__button button" type="button">
+                  Learn More
+                </button>
+              </div>
+              <div class="why__image">
+                <img src="./img/why/image.png" alt="Image of girl" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__customers customers">
+          <div class="customers__container-big">
+            <div class="customers__container">
+              <h2 class="customers__heading title">
+                What <span>Customers</span> have to say
+              </h2>
+              <p class="customers__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu,
+                mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac
+              </p>
+              <div class="customers__feedback feedback-customers">
+                <div class="feedback-customers__item">
+                  <div class="feedback-customers__image-ibg">
+                    <img src="./img/customers/customer-1.png" alt="Image #1" />
+                  </div>
+                  <div class="feedback-customers__content">
+                    <p class="feedback-customers__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut eu, mollis aenean sit dictum tincidunt. Ut arcu,
+                      suscipit ac
+                    </p>
+                    <p class="feedback-customers__name">Tonia Smart</p>
+                  </div>
+                </div>
+                <div class="feedback-customers__item">
+                  <div class="feedback-customers__image-ibg">
+                    <img src="./img/customers/customer-2.png" alt="Image #2" />
+                  </div>
+                  <div class="feedback-customers__content">
+                    <p class="feedback-customers__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut eu, mollis aenean sit dictum tincidunt. Ut arcu,
+                      suscipit ac
+                    </p>
+                    <p class="feedback-customers__name">Tonia Smart</p>
+                  </div>
+                </div>
+              </div>
+              <button class="customers__button button" type="button">
+                View All
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="page__download download" data-prlx-mouse-wrapper>
+          <div class="download__container-big">
+            <div class="download__container">
+              <div class="download__body">
+                <h2 class="download__heading title">
+                  Download <span>FarmVest app</span> and invest in your future
+                </h2>
+                <div class="download__apps">
+                  <a class="download__app" href=""
+                    ><img src="./img/download/appstore.svg" alt="Appstore icon"
+                  /></a>
+                  <a class="download__app" href=""
+                    ><img
+                      src="./img/download/googlepay.svg"
+                      alt="Googleplay icon"
+                  /></a>
+                </div>
+                <div
+                  class="download__circle download__circle_1"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                ></div>
+                <div
+                  class="download__circle download__circle_2"
+                  data-prlx-mouse
+                  data-prlx-cx="300"
+                  data-prlx-cy="300"
+                  data-prlx-dxr
+                  data-prlx-dyr
+                ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container-big">
+          <div class="footer__main main-footer">
+            <div class="main-footer__info">
+              <a class="main-footer__logo" href=""
+                ><img src="./img/footer/logo.svg" alt="FarmVest Logo"
+              /></a>
+              <p class="main-footer__text">
+                High level experience in web design and development knowledge,
+                producing quality work.
+              </p>
+            </div>
+            <div class="main-footer__form form-main">
+              <p class="form-main__text">
+                Subscribe to stay tuned for new web design and latest updates.
+                Let's do it!
+              </p>
+              <form class="form-main__form form" action="#">
+                <input
+                  class="form__input"
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                />
+                <button class="form__button button" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            <div class="main-footer__contacts">
+              <div class="main-footer__social">
+                <h3 class="main-footer__label">Follow us</h3>
+                <div class="social">
+                  <a class="social__item" href=""
+                    ><img src="./img/icons/instagram.svg" alt="Instagram logo"
+                  /></a>
+                  <a class="social__item" href=""
+                    ><img src="./img/icons/facebook.svg" alt="Facebook logo"
+                  /></a>
+                  <a class="social__item" href=""
+                    ><img src="./img/icons/twitter.svg" alt="Twitter logo"
+                  /></a>
+                </div>
+              </div>
+              <div class="main-footer__call-us">
+                <h3 class="main-footer__label">Call us</h3>
+                <a class="main-footer__phone" href="tel:+2349123456789"
+                  >+2349123456789</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__copy">© 2021 All Rights Reserved</p>
+            <nav class="footer__menu menu-footer">
+              <ul class="menu-footer__list">
+                <li class="menu-footer__item">
+                  <a class="menu-footer__link" href="">Privacy Policy</a>
+                </li>
+                <li class="menu-footer__item">
+                  <a class="menu-footer__link" href="">Terms of Use</a>
+                </li>
+                <li class="menu-footer__item">
+                  <a class="menu-footer__link" href="">Sales and Refunds</a>
+                </li>
+                <li class="menu-footer__item">
+                  <a class="menu-footer__link" href="">Legal</a>
+                </li>
+                <li class="menu-footer__item">
+                  <a class="menu-footer__link" href="">Site Map</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
