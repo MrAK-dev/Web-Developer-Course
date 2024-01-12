@@ -11,9 +11,7 @@ Different project sets up at different branches
 
 ###### Project created with HTML and SCSS. Source code on branch 08. Hosted at [Link](https://cozy-pastelito-e1f2cf.netlify.app)
 
-###### Project created with HTML and SCSS. Source code on branch 07.
-
-Hosted at [Link](https://leafy-monstera-8db377.netlify.app/)
+###### Project created with HTML and SCSS. Source code on branch 07.Hosted at [Link](https://leafy-monstera-8db377.netlify.app/)
 
 ###### Project created with HTML and SCSS. Source code on branch 05. Hosted at [Link](https://glittering-chebakia-e8e1af.netlify.app)
 
